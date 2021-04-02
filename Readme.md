@@ -1,1 +1,0 @@
-This is a challenge on FrontendMentor.io.                                                                                                                                                                                             

@@ -1,0 +1,96 @@
+:root {
+  --ptxt-800-blue: hsl(238, 29%, 16%);
+  --ptxt-200-red: hsl(14, 88%, 65%);
+
+  --ntxt-400-grayishBlue: hsl(237, 12%, 33%);
+  --ntxt-200-grayishBlue: hsl(240, 6%, 50%);
+
+  --d-grayishBlue: hsl(240, 5%, 91%);
+
+  font-size: 14px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/gradients.jpg"),
+    url("./images/bg-pattern-desktop.svg");
+  background-size: cover; /* allows the background-image to cover its entire element */
+  background-repeat: no-repeat;
+}
+
+/* MAIN */
+
+.container {
+  display: flex;
+  position: relative; /* keeps .header_questions (child) relative when applying position: absolute. */
+  height: 80%;
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 6px 5px rgba(0, 0, 0, 0.21);
+  box-shadow: 5px 5px 6px 5px rgba(0, 0, 0, 0.21);
+}
+
+/* MAIN__QUESTIONS/ANSWERS */
+
+.headerANDquestions {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 80%;
+  flex-wrap: wrap;
+  position: absolute; /* removes original space, removing it from flow of content, relative does not. */
+  top: 65px;
+  right: 8%;
+}
+
+.headerANDquestions > h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.questions__question {
+  color: var(--ntxt-400-grayishBlue);
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.questions__dropDown {
+  background-image: url("/images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+
+.questions__answer {
+  display: none;
+}
+
+/* SVGs */
+
+.illustration__womenDesktop {
+  background-image: url("./images/illustration-woman-online-desktop.svg");
+  width: 45%;
+  height: 50%;
+  background-position: cover;
+  display: none;
+}
+
+.illustration__cube {
+  background-image: url("./images/illustration-box-desktop.svg");
+  display: none;
+}
